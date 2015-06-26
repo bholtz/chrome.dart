@@ -7,6 +7,7 @@ import 'utils_test.dart' as utils_test;
 import 'chrome_idl_test.dart' as test_chrome_idl;
 import 'chrome_idl_files_test.dart' as test_chrome_idl_files;
 import 'transformer_test.dart' as transformer_test;
+import 'simple_http_client_test.dart' as simple_http_client_test;
 
 void main() {
   model_json_test.main();
@@ -15,4 +16,5 @@ void main() {
   test_chrome_idl.main();
   test_chrome_idl_files.main();
   transformer_test.defineTests();
+  simple_http_client_test.defineTests();
 }
