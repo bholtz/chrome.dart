@@ -1,3 +1,5 @@
+library omaha_test;
+
 import 'dart:async';
 
 import '../tool/omaha.dart';

@@ -1,3 +1,5 @@
+library tag_matcher_test;
+
 import '../tool/tag_matcher.dart';
 import 'package:unittest/unittest.dart';
 

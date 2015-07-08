@@ -38,14 +38,6 @@ void defineTests() {
       expect(await simpleClient.getHtmlAtUri(Uri.parse('example.com')),
           testString);
     });
-
-    test('unescapes html correctly', () async {
-      var testString = 'this & that is <\"\'>';
-      html = [HTML_ESCAPE.convert(testString)];
-
-      expect(await simpleClient.getHtmlAtUri(Uri.parse('example.com')),
-          testString);
-    });
   });
 }
 

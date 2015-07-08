@@ -10,6 +10,7 @@ import 'transformer_test.dart' as transformer_test;
 import 'simple_http_client_test.dart' as simple_http_client_test;
 import 'omaha_test.dart' as omaha_test;
 import 'tag_matcher_test.dart' as tag_matcher_test;
+import 'googlesource_test.dart' as googlesource_test;
 
 void main() {
   model_json_test.main();
@@ -21,4 +22,5 @@ void main() {
   simple_http_client_test.defineTests();
   omaha_test.defineTests();
   tag_matcher_test.defineTests();
+  googlesource_test.defineTests();
 }
