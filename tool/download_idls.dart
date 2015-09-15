@@ -14,7 +14,7 @@ main() {
 class IdlDownloader {
   static const chromiumBaseUrl = 'https://chromium.googlesource.com';
   static const chromiumVersionPrefix = '/chromium/src/+/';
-  static const idlDirs = const ['chrome', 'extensions'];
+  static const idlDirs = const ['chrome/common/extensions/api', 'extensions/common/api'];
   final SimpleHttpClient _client;
   OmahaVersionExtractor _omahaVersionExtractor;
   GoogleSourceCrawler _googleSourceCrawler;
@@ -34,9 +34,14 @@ class IdlDownloader {
 
   Future _downloadFile(GoogleSourceFile file) async {
     var filePath = file.url.replaceFirst('/', '');
-    print(filePath);
-    var fp = new File(filePath);
+    var fp = new File(_resolvePath(filePath));
     await fp.create(recursive: true);
     await fp.writeAsString(file.fileContents);
+  }
+
+  String _resolvePath(String path) {
+    path = path.replaceFirst(new RegExp('^.*[0-9]/'), '');
+    var prefix = path.split('/')[0];
+    return path.replaceFirst(new RegExp('.*/api'), 'idl/$prefix');
   }
 }
