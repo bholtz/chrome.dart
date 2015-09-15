@@ -6,7 +6,7 @@ import 'dart:io';
 
 import '../tool/simple_http_client.dart';
 import 'package:mock/mock.dart';
-import 'package:unittest/unittest.dart';
+import 'package:test/test.dart';
 
 void main() => defineTests();
 

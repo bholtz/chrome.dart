@@ -18,6 +18,7 @@ class SimpleHttpClient {
   }
 }
 
+//
 class ThrottledHttpClient extends SimpleHttpClient {
   static final quotaRefreshDuration = new Duration(minutes: 5, seconds: 30);
   static final requestQuota = 600;
