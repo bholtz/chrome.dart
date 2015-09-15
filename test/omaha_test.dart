@@ -2,8 +2,8 @@ library omaha_test;
 
 import 'dart:async';
 
-import '../tool/omaha.dart';
-import '../tool/simple_http_client.dart';
+import '../tool/src/omaha.dart';
+import '../tool/src/simple_http_client.dart';
 import 'package:mock/mock.dart';
 import 'package:test/test.dart';
 

@@ -3,9 +3,9 @@ library download_idls;
 import 'dart:async';
 import 'dart:io';
 
-import 'googlesource.dart';
-import 'omaha.dart';
-import 'simple_http_client.dart';
+import 'src/googlesource.dart';
+import 'src/omaha.dart';
+import 'src/simple_http_client.dart';
 
 main() {
   new IdlDownloader(new SimpleHttpClient(new HttpClient())).downloadIdls();

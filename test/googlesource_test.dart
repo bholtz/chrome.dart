@@ -3,8 +3,8 @@ library googlesource_test;
 import 'dart:async';
 import 'dart:convert';
 
-import '../tool/googlesource.dart';
-import '../tool/simple_http_client.dart';
+import '../tool/src/googlesource.dart';
+import '../tool/src/simple_http_client.dart';
 import 'package:mock/mock.dart';
 import 'package:test/test.dart';
 
